@@ -54,12 +54,12 @@ namespace Factorial
             int N = Int32.Parse(Console.ReadLine());
             Console.Write("Введите число М: ");
             int M = Int32.Parse(Console.ReadLine());
-            Console.WriteLine($"Количество перестановок={Factorial(N)}");
+            Console.WriteLine($"Количество перестановок = {Factorial(N)}");
             int x = N - M;
-            long A = (Factorial(N) / Factorial1(x));
-            Console.WriteLine("Количество размещений=" + A);
-            long C = (Factorial(N) / (Factorial2(M) * Factorial1(x)));
-            Console.Write("Количество сочетаний=" + C);
+            long A = Factorial(N) / Factorial1(x);
+            Console.WriteLine("Количество размещений = " + A);
+            long C = Factorial(N) / (Factorial2(M) * Factorial1(x));
+            Console.Write("Количество сочетаний = " + C);
             Console.ReadKey();
 
         }
